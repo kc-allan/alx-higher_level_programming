@@ -1,12 +1,9 @@
 #!/usr/bin/python3
 def uppercase(str):
-    i = 1
-    n = len(str)
-    for ch in str:
-        if n == 0:
-            ch = " "
-        if ord(ch) >= 97 and ord(ch) <= 122:
-            print("{}".format(chr(ord(ch) - 32)), end="" if i != n else "\n")
+    for i in range(len(str)):
+        if ord(str[i]) >= 97 and ord(str[i]) < 123:
+            letter = 32
         else:
-            print("{}".format(ch), end="" if i != n else "\n")
-        i += 1
+            letter = 0
+        print("{:c}".format(ord(str[i]) - letter), end='')
+    print()

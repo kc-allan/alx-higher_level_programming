@@ -3,7 +3,6 @@ def uppercase(str):
     i = 1
     n = len(str)
     if n == 0:
-        print(" ")
         return {0}
     for ch in str:
         if ord(ch) >= 97 and ord(ch) <= 122:

@@ -3,4 +3,5 @@ def print_matrix_integer(matrix=[[]]):
     for i in range(0, len(matrix), 1):
         for n in range(0, len(matrix[i]), 1):
             ln = len(matrix[i])
-            print("{:d}".format(matrix[i][n]), end="\n" if n == ln - 1 else " ")
+            k = matrix[i][n]
+            print("{:d}".format(k), end="\n" if n == ln - 1 else " ")

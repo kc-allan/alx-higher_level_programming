@@ -8,4 +8,5 @@ def best_score(a_dictionary):
         for k in a_dictionary:
             if a_dictionary[k] > maxn:
                 best = k
+                maxn = a_dictionary[k]
     return best

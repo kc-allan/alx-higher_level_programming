@@ -1,15 +1,18 @@
 #!/usr/bin/python3
 def safe_print_list_integers(my_list=[], x=0):
     i = 0
+    k = 0
 
     while i < x:
         try:
-            print(i);
+            print("{:d}".format(my_list[i]), end="");
+            k += 1
         except IndexError:
-            pass
+            break
         except TypeError:
             pass
         except ValueError:
             pass
         i += 1
-    return i
+    print()
+    return k

@@ -27,7 +27,7 @@ class Square:
         i = 0
         k = 0
         if self.__size == 0:
-            print(" ")
+            print("")
         else:
             for i in range(self.__size):
                 for k in range(self.__size):

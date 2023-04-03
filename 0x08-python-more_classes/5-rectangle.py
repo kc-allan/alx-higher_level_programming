@@ -70,4 +70,5 @@ class Rectangle:
         return rect
 
     def __del__(self):
+        """Instance when Rectangle is deleted"""
         print("Bye rectangle...")

@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Adds two numbers"""
+
+
 def add_integer(a, b=98):
     """Addition function"""
     if not isinstance(a, int) and not isinstance(a, float):

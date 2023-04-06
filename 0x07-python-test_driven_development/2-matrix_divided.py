@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""Matrix division"""
+
+
 def matrix_divided(matrix, div):
+    """Divides all values of a matrix by div"""
     new_matrix = []
 
     if not isinstance(matrix, list):

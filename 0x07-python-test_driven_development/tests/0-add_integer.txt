@@ -34,3 +34,7 @@ TypeError: a must be an integer
 
 >>> add_integer(6.7, -4.9)
 2
+
+>>> add_integer(1.7976931348623157E+308 * 2.0, 2)
+Traceback (most recent call last):
+OverflowError: cannot convert float infinity to integer

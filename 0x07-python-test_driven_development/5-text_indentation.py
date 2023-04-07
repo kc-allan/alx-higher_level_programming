@@ -15,4 +15,3 @@ def text_indentation(text):
             i += 2
         else:
             i += 1
-    print("\n")

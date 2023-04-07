@@ -9,6 +9,8 @@ def matrix_divided(matrix, div):
         if not all(isinstance(row, list)):
             raise TypeError(err)
             for x in row:
+                if not all(x.isidentifier()):
+                    raise TypeError(err)
                 if not all(isinstance(x, (int, float))):
                     raise TypeError(err)
     if not all(len(matrix[0]) == len(row) for row in matrix):

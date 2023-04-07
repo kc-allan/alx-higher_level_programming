@@ -3,35 +3,16 @@
 
 
 def matrix_divided(matrix, div):
-    """Divides all values of a matrix by div"""
-    new_matrix = []
-
-    if not isinstance(matrix, list):
-        print("Matrix is not a list")
+    """Divides all elments in matrix by div"""
+    if not all(isinstance(row, list) and all(isinstance(elem, (int, float)) for elem in row) for row in matrix):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-    for i in matrix:
-        if not isinstance(i, list):
-            raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
-        for k in i:
-            if not isinstance(k, int) and not isinstance(k, float):
-                print("Not list of lists or not integers")
-                raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
 
-    row_len = len(matrix[0])
-    for row in matrix:
-        if len(row) != row_len:
-            raise TypeError("Each row of the matrix must have the same size")
-            break
-    if not isinstance(div, int) and not isinstance(div, float):
+    if not all(len(row) == len(matrix[0]) for row in matrix):
+        raise TypeError("Each row of the matrix must have the same size")
+    if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-
-    for i in matrix:
-        row = []
-        for k in i:
-            row.append(round(k / div, 2))
-        new_matrix.append(row)
-        row = []
+    new_matrix = [[round(elem / div, 2) for elem in row] for row in matrix]
 
     return new_matrix

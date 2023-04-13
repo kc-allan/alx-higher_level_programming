@@ -1,0 +1,8 @@
+#!/usr/bin/python3
+"""Reads aa file"""
+
+
+def read_file(filename=""):
+    """Prints out file xontents"""
+    with open(filename, encoding="utf-8") as f:
+        print(f.read(), end="")

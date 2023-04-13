@@ -1,0 +1,19 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> lst = MyList()
+>>> lst.append(5)
+>>> lst.append("string")
+>>> lst.append()
+Traceback (most recent call last):
+TypeError: append() takes exactly one argument (0 given)
+
+>>> lst.hello()
+Traceback (most recent call last):
+AttributeError: 'MyList' object has no attribute 'hello'
+
+>>> print(lst)
+[5, 'string']
+
+>>> lst.print_sorted()
+Traceback (most recent call last):
+TypeError: '<' not supported between instances of 'str' and 'int'

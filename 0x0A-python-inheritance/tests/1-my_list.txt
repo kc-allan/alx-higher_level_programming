@@ -22,6 +22,7 @@ AttributeError: 'MyList' object has no attribute 'hello'
 [-4, 0, 5]
 
 >>> lst.print_sorted() == lst
+[-4, 0, 5]
 False
 
 >>> lst.append("string")

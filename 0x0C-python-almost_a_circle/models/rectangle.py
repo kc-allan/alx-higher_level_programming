@@ -113,7 +113,7 @@ class Rectangle(Base):
     def display(self):
         for i in range(self.height):
             for k in range(self.width):
-                print("#")
+                print("#", end="")
             print()
 
     def __str__(self):
@@ -133,8 +133,3 @@ class Rectangle(Base):
         rect = "Rectangle(" + str(self.__width)
         rect += ", " + str(self.__height) + ")"
         return rect
-
-    def __del__(self):
-        """Instance when Rectangle is deleted"""
-        Rectangle.number_of_instances -= 1
-        print("Bye rectangle...")

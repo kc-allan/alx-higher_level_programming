@@ -119,15 +119,7 @@ class Rectangle(Base):
 
     def __str__(self):
         """Parses string"""
-        if self.__height == 0 or self.__width == 0:
-            return ""
-        rect = []
-        for i in range(self.__height):
-            for k in range(self.__width):
-                rect.append(str(self.print_symbol))
-            if i + 1 != self.__height:
-                rect.append("\n")
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(id, x, y, width, height)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
 
     def __repr__(self):
         """String representation"""

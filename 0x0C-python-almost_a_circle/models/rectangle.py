@@ -112,7 +112,9 @@ class Rectangle(Base):
 
     def display(self):
         """Prints rectangle in # form"""
+        print("\n" * self.y, end="")
         for i in range(self.height):
+            print(" " * self.x, end="")
             for k in range(self.width):
                 print("#", end="")
             print()

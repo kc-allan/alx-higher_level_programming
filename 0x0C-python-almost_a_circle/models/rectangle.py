@@ -143,7 +143,6 @@ class Rectangle(Base):
                 elif k == "y":
                     self.y = v
 
-
     def __str__(self):
         """Parses string"""
         id = self.id

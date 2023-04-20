@@ -2,9 +2,9 @@
 """Define a rectangle"""
 
 
-class Rectangle:
+class Rectangle(Base):
     """Represents the rectangle"""
-    def __init__(self, width=0, height=0):
+    def __init__(self, width, height, x=0, y=0, id=None):
         """Initialize Rectangle
 
 
@@ -12,9 +12,11 @@ class Rectangle:
             width: width of the rectangle
             height: height of the rectangle
         """
-        Rectangle.number_of_instances += 1
+        super().__init__(id)
         self.width = width
         self.height = height
+        self.x = x
+        self.y = y
 
     @property
     def width(self):

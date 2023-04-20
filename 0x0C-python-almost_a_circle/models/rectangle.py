@@ -10,6 +10,9 @@ class Rectangle(Base):
         args:
             width: width of the rectangle
             height: height of the rectangle
+            x: x position
+            y: y position
+            id: id from Base
         """
         super().__init__(id)
         self.width = width

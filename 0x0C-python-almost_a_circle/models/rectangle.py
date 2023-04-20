@@ -111,8 +111,8 @@ class Rectangle(Base):
         return rect_2
 
     def display(self):
-        for i in range(height):
-            for k in range(width):
+        for i in range(self.height):
+            for k in range(self.width):
                 print("#")
             print()
 

@@ -111,6 +111,7 @@ class Rectangle(Base):
         return rect_2
 
     def display(self):
+        """Prints rectangle in # form"""
         for i in range(self.height):
             for k in range(self.width):
                 print("#", end="")

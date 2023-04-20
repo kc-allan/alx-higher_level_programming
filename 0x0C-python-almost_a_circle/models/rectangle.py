@@ -120,6 +120,7 @@ class Rectangle(Base):
             print()
 
     def update(self, *args):
+        """Updates self attributes"""
         val = ["id", self.width, self.height, self.x, self.y]
         for i in range(len(args)):
             val[i] = args[i]

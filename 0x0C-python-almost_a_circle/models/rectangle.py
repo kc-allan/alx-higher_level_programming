@@ -127,7 +127,7 @@ class Rectangle(Base):
                 rect.append(str(self.print_symbol))
             if i + 1 != self.__height:
                 rect.append("\n")
-        return "".join(rect)
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(id, x, y, width, height)
 
     def __repr__(self):
         """String representation"""

@@ -119,6 +119,16 @@ class Rectangle(Base):
                 print("#", end="")
             print()
 
+    def update(self, *args):
+        val = ["id", self.width, self.height, self.x, self.y]
+        for i in range(len(args)):
+            val[i] = args[i]
+        self.id = val[0]
+        self.width = val[1]
+        self.height = val[2]
+        self.x = val[3]
+        self.y = val[4]
+
     def __str__(self):
         """Parses string"""
         id = self.id

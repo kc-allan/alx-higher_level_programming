@@ -110,6 +110,12 @@ class Rectangle(Base):
             return rect_1
         return rect_2
 
+    def display(self):
+        for i in range(height):
+            for k in range(width):
+                print("#")
+            print()
+
     def __str__(self):
         """Parses string"""
         if self.__height == 0 or self.__width == 0:

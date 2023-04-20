@@ -119,7 +119,12 @@ class Rectangle(Base):
 
     def __str__(self):
         """Parses string"""
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+        id = self.id
+        width = self.width
+        height = self.height
+        x = self.x
+        y = self.y
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(id, x, y, width, height)
 
     def __repr__(self):
         """String representation"""

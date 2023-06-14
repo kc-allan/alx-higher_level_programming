@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """Returns json representation of an objec5"""
+import json
 
 
 def to_json_string(my_obj):

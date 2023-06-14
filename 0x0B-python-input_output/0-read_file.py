@@ -5,6 +5,7 @@
 def read_file(filename=""):
     """Defines o9ening and reading a file"""
 
-    with open(filename) as f:
+    with open(filename, "r", encoding="utf-8") as f:
         cont = f.read()
         print(cont)
+    f.close()

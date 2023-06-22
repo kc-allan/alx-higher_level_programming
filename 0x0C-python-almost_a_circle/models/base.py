@@ -4,7 +4,9 @@
 
 class Base:
     """Represents Base"""
+
     __nb_objects = 0
+
     def __init__(self, id=None):
         """Initializes the class"""
         if not id is None:

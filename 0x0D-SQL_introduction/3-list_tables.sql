@@ -1,3 +1,6 @@
+-- Lists tables on a database passed as command line argument
+
+
 DELIMITER //
 CREATE PROCEDURE ListTablesInDatabase(IN dbName VARCHAR(255))
 BEGIN

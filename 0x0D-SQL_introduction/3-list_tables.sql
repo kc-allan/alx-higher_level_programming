@@ -2,6 +2,8 @@
 
 
 DELIMITER //
+DROP PROCEDURE IF EXISTS ListTablesInDatabase //
+
 CREATE PROCEDURE ListTablesInDatabase(IN dbName VARCHAR(255))
 BEGIN
     SET @query = CONCAT('USE', dbName);

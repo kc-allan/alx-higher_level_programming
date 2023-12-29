@@ -6,7 +6,7 @@ DROP PROCEDURE IF EXISTS ListTablesInDatabase //
 
 CREATE PROCEDURE ListTablesInDatabase(IN dbName VARCHAR(255))
 BEGIN
-    SET @query = CONCAT('USE', dbName);
+    SET @query = CONCAT('USE', dbName, ';');
     PREPARE stmt FROM @query;
     EXECUTE stmt;
     DEALLOCATE PREPARE stmt;

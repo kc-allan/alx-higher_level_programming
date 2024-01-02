@@ -10,6 +10,7 @@ if __name__ == '__main__':
     dbuser = args[1]
     dbpasswd = args[2]
     dbname = args[3]
+    
     db = MySQLdb.connect(
         host="localhost", user=dbuser, port=3306, passwd=dbpasswd, db=dbname
     )

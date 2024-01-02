@@ -25,3 +25,5 @@ if __name__ == '__main__':
                 print(rows[row][0], end=', ')
         except IndexError:
             continue
+    if not rows:
+        print()

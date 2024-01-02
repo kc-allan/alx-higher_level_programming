@@ -18,7 +18,10 @@ if __name__ == '__main__':
     cur.execute(query, (state,))
     rows = cur.fetchall()
     for row in range(len(rows)):
-        if row+1 == len(rows):
-            print(rows[row][0])
-        else:
-            print(rows[row][0], end=', ')
+        try:
+            if row+1 == len(rows):
+                print(rows[row][0])
+            else:
+                print(rows[row][0], end=', ')
+        except IndexError:
+            continue

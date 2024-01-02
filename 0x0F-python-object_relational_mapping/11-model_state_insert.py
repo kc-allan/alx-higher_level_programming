@@ -14,3 +14,4 @@ if __name__ == '__main__':
     SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
     session = SessionLocal()
     session.add(State(name='Louisiana'))
+    session.commit()

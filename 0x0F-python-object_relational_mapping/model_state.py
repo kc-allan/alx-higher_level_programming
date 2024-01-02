@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""
+Defines a class State linked to the table states in a database
+"""
 from sqlalchemy.orm import declarative_base
 from sqlalchemy import Column, Integer, String
 

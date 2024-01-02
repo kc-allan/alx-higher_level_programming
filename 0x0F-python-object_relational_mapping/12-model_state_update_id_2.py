@@ -13,5 +13,7 @@ if __name__ == '__main__':
     )
     SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
     session = SessionLocal()
-    session.query(State).filter(State.id==2).update({State.name:'New Mexico'})
+    session.query(State).filter(State.id == 2).update(
+        {State.name: 'New Mexico'}
+    )
     session.commit()

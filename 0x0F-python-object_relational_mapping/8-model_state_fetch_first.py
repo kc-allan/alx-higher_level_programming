@@ -14,5 +14,5 @@ if __name__ == '__main__':
     session = SessionLocal()
     state = session.query(State).first()
     print("{}: {}".format(state.id, state.name))
-    if not state:
+    if state == None:
         print('Nothing')

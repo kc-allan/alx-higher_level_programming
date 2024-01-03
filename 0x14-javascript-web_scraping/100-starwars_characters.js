@@ -8,11 +8,11 @@ request(url, function (err, response, body) {
   } else if (response.statusCode === 200) {
     const res = JSON.parse(body).characters;
     res.forEach(character => {
-      request(`${character}`, async function (err, response, body) {
+      request(`${character}`, function (err, response, body) {
         if (err) {
           console.log(err);
         } else if (response.statusCode === 200) {
-          const char = await JSON.parse(body);
+          const char = JSON.parse(body);
           console.log(char.name);
         }
       });

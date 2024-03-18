@@ -1,5 +1,3 @@
 #!/bin/bash
-url=$1
-res=$(curl -sI "$url")
-cont_len=$(echo "$res" | grep "Content-Length") | tr -d '\r' | wc -c
-echo "$cont_len"
+#A script that prints the content length of a http reponse
+echo $(curl -sI "$1") | $(echo "$res" | grep "Content-Length") | tr -d '\r' | wc -c
